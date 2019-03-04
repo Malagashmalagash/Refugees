@@ -2,6 +2,4 @@
 $primary: darken(#428bca, 20%);
 
 // the ~ allows you to reference things in node_modules
-@import "~bootswatch/dist/minty/variables";
 @import "~bootstrap/scss/bootstrap";
-@import "~bootswatch/dist/minty/bootswatch";
