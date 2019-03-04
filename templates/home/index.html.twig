@@ -5,8 +5,14 @@
 {% block body %}
     <div class="container">
         <div class="row">
-            <div class="text-center col-md-4">{{ presentation }}</div>
-            <div class="text-center col-md-4">{{ message }}</div>
+            <div class="col-md-12">
+                <div class="text-center col-md-6 offset-3 ">
+                    <h1>{{ presentation }}</h1>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="text-center col-md-4 offset-4">{{ message }}</div>
+            </div>
         </div>
     </div>
 {% endblock %}
