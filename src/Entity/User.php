@@ -51,6 +51,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Vous devez renseigner votre mot de passe")
      */
     private $hash;
 
@@ -73,8 +74,10 @@ class User implements UserInterface
      */
     public function userCreatedAt()
     {
+        if(empty($this->createdAt)) {
             $date = new DateTime('now');
             $this->createdAt = $date;
+        }
     }
 
     public function getId(): ?int

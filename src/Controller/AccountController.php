@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class AccountController extends AbstractController
 {
@@ -46,6 +47,37 @@ class AccountController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+
+    /**
+     *  login
+     * @Route("/login", name="account_login")
+     *
+     * @param AuthenticationUtils $utils
+     * @return Response
+     */
+    public function login(AuthenticationUtils $utils)
+    {
+        $error = $utils->getLastAuthenticationError();
+        $lastUsername = $utils->getLastUsername();
+
+        return $this->render('account/login.html.twig', [
+            'hasError' => $error !== null,
+            'lastUsername' => $lastUsername,
+        ]);
+    }
+
+    /**
+     * logout
+     *
+     * @Route("/logout", name="account_logout")
+     *
+     * @return void
+     */
+    public function logout()
+    {
+
+    }
+
 
     /**
      * display and modify a user profile
