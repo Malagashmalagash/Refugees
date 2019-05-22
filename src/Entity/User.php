@@ -40,6 +40,12 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Vous devez renseignez un pseudonyme")
+     */
+    private $alias;
+
+    /**
+     * @ORM\Column(type="string", length=255)
      * @Assert\Email(message="Vous devez renseigner une adresse email valide")
      */
     private $email;
@@ -66,7 +72,6 @@ class User implements UserInterface
      */
     private $createdAt;
 
-
     /**
      * initialize creation date
      *
@@ -78,6 +83,16 @@ class User implements UserInterface
             $date = new DateTime('now');
             $this->createdAt = $date;
         }
+    }
+
+    /**
+     * Used for Twig's purposes
+     *
+     * @return string
+     */
+    public function getFullName()
+    {
+        return "{$this->getLastName()} {$this->getFirstName()}";
     }
 
     public function getId(): ?int
@@ -105,6 +120,18 @@ class User implements UserInterface
     public function setLastName(string $lastName): self
     {
         $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    public function getAlias(): ?string
+    {
+        return $this->alias;
+    }
+
+    public function setAlias(string $alias): self
+    {
+        $this->alias = $alias;
 
         return $this;
     }

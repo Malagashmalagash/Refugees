@@ -15,8 +15,9 @@ class AccountType extends ApplicationType
     {
         $builder
             ->add('firstName',TextType::class, $this->getConfiguration('Prénom', 'John'))
-            ->add('lastName',TextType::class, $this->getConfiguration('Prénom', 'John'))
-            ->add('email',EmailType::class, $this->getConfiguration('Prénom', 'John'))
+            ->add('lastName',TextType::class, $this->getConfiguration('Nom', 'Doe'))
+            ->add('alias',TextType::class, $this->getConfiguration('Pseudonyme', 'Marty'))
+            ->add('email',EmailType::class, $this->getConfiguration('Email', 'John.Doe@gmail.com'))
         ;
     }
 

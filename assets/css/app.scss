@@ -4,3 +4,19 @@ $primary: darken(#428bca, 20%);
 // the ~ allows you to reference things in node_modules
 
 @import "~bootstrap/scss/bootstrap";
+
+.avatar {
+  max-height: 128px;
+  max-width: 128px;
+  border-radius: 50%;
+}
+
+.avatar-medium {
+  max-height: 64px;
+  max-width: 64px;
+}
+
+.avatar-small {
+  max-height: 32px;
+  max-width: 32px;
+}
