@@ -14,7 +14,7 @@ class PasswordUpdate
     private $newPassword;
 
     /**
-     * @Assert\EqualTo(propertyPath="newPassword", message="Vous n'avez pas correctement confimé votre mot de passe")
+     * @Assert\EqualTo(propertyPath="newPassword", message="Vous n'avez pas correctement confirmé votre mot de passe")
      */
     private $confirmPassword;
 
