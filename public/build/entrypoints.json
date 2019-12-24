@@ -9,6 +9,12 @@
       "css": [
         "/build/app.css"
       ]
+    },
+    "navbar": {
+      "js": [
+        "/build/runtime.js",
+        "/build/navbar.js"
+      ]
     }
   }
 }

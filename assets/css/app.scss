@@ -5,6 +5,16 @@ $primary: darken(#428bca, 20%);
 
 @import "~bootstrap/scss/bootstrap";
 
+@font-face {
+  font-family: 'cardo';
+  src: url("../fonts/Cardo/Cardo-Italic.ttf") format('truetype'), url("../fonts/Cardo/Cardo-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'open-sans';
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf") format('truetype'), url("../fonts/Open_Sans/OpenSans-Regular.ttf") format('truetype');
+}
+
 .avatar {
   max-height: 128px;
   max-width: 128px;
@@ -20,3 +30,6 @@ $primary: darken(#428bca, 20%);
   max-height: 32px;
   max-width: 32px;
 }
+
+@import "home";
+@import "navbar";

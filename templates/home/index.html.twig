@@ -1,18 +1,62 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Salut à toi, punk Iranien{% endblock %}
+{% block title %}Mel-art{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="text-center col-md-6 offset-3 ">
-                    <h1>{{ presentation }}</h1>
+    <div class="home">
+        <div class="container-content">
+
+            <div class="banner">
+                <img class=""
+                     src="{{ asset('/images/Banner.png') }}"
+                     alt="bannière du site"
+                >
+                <div class="layer">
+                    <h1 class="main-title">
+                        Mel-Art
+                    </h1>
+                    <p>Faites de vos ongles de vraies petites oeuvres d'art grâce au Nail Art !</p>
                 </div>
             </div>
-            <div class="col-md-12">
-                <div class="text-center col-md-4 offset-4">{{ message }}</div>
+
+            <div class="concept text-center">
+                <h2>Le concept</h2>
+                <h3 class="catch-phrase">
+                    Faites de vos ongles de vraies petites oeuvres d'art grâce au Nail Art !
+                </h3>
+                <p class="content">
+                    Corbeille.Work, destiné aux entreprises et à leurs collaborateurs, propose des formules de fruits gourmands et vitaminés avec la garantie d’une fraîcheur incomparable, s’adaptant à la vie professionnelle de chacun. Nos maîtres fruitiers sélectionnent avec soin les meilleurs fruits de saison pour un effet rempli de saveurs
+                </p>
             </div>
+
+            <div class="offer text-center">
+                <h2>Les formules</h2>
+            </div>
+
+            <div class="skills text-center">
+                <h2>Les techniques</h2>
+                <div class="skills-list">
+                    <div class="skills-specific">
+                        <p class="title">nail art graphique</p>
+                        <p class="content">Rapide à réaliser, cette manucure en noir et blanc est ultra chic</p>
+                    </div>
+                    <div class="skills-specific">
+                        <p class="title">le nail art à poix</p>
+                        <p class="content">Cédez à la grande tendance du nail art avec cette jolie manucure à pois</p>
+                    </div>
+                    <div class="skills-specific">
+                        <p class="title">le stamping</p>
+                        <p class="content"></p>
+                    </div>
+                    <div class="skills-specific">
+                        <p class="title">le nail art "romantique"</p>
+                        <p class="content">Cette technique permet avec n’importe quel vernis de créer une multitude d’effets : points, lignes, formes géométriques ...</p>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 {% endblock %}
+
