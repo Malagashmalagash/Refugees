@@ -1,10 +1,6 @@
 .home {
   .container-content {
 
-    // colors //
-    $colorWhite : #FFFFFF;
-    $colorLightGrey : #F7F7F7;
-
     // titles //
     h1 {
       font-family: cardo;
@@ -13,8 +9,29 @@
 
     h2 {
       font-family: cardo;
-      font-size: calc(3vh + 20px);
+      font-size: calc(2.5vh + 20px);
       margin-bottom: 0;
+    }
+
+    .one-page {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .auto-center {
+        margin: auto 0 auto 0;
+      }
+    }
+
+    // Parallaxe //
+    .cParallaxe {
+      background-attachment: fixed;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 500px;
+      background-image: url('/images/background3.jpeg');
     }
 
     // SCSS //
@@ -76,10 +93,58 @@
     }
 
     .skills {
-      padding: 8vh 40vh 8vh 40vh;
+      padding: 8vh 8vw 8vh 8vw;
 
       font-family: cardo;
       background-color: $colorLightGrey;
+
+      .catch-phrase {
+        font-family: cardo-regular;
+        font-size: calc(1vh + 15px);
+        color: #777;
+      }
+
+      .skills-list {
+        margin-top: 5vh;
+
+        .skills-specific {
+          .title {
+            font-family: cardo-regular;
+            font-size: calc(1vh + 15px);
+            color: #777;
+
+            margin: 2vh 0 1vh 0;
+          }
+
+          .content {
+            font-family: open-sans;
+            font-size: calc(1vh + 6px);
+            color: #777;
+          }
+        }
+      }
+
+      .img-rounded {
+        border-radius: 50%;
+        padding: 10%;
+      }
+    }
+
+    .materials {
+      padding: 8vh 8vw 8vh 8vw;
+
+      font-family: cardo;
+      background-color: $colorLightGrey;
+    }
+
+    .reservation {
+      .catch-phrase {
+        font-size: calc(1.2vh + 12px);
+        color: #797979;
+        font-style:normal;
+
+        margin-bottom: 2vh;
+      }
     }
   }
 }

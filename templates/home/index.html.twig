@@ -3,14 +3,10 @@
 {% block title %}Mel-art{% endblock %}
 
 {% block body %}
-    <div class="home">
+    <div class="home ">
         <div class="container-content">
 
-            <div class="banner">
-                <img class=""
-                     src="{{ asset('/images/Banner.png') }}"
-                     alt="bannière du site"
-                >
+            <div class="banner cParallaxe one-page">
                 <div class="layer">
                     <h1 class="main-title">
                         Mel-Art
@@ -19,41 +15,71 @@
                 </div>
             </div>
 
-            <div class="concept text-center">
-                <h2>Le concept</h2>
-                <h3 class="catch-phrase">
-                    Faites de vos ongles de vraies petites oeuvres d'art grâce au Nail Art !
-                </h3>
-                <p class="content">
-                    Corbeille.Work, destiné aux entreprises et à leurs collaborateurs, propose des formules de fruits gourmands et vitaminés avec la garantie d’une fraîcheur incomparable, s’adaptant à la vie professionnelle de chacun. Nos maîtres fruitiers sélectionnent avec soin les meilleurs fruits de saison pour un effet rempli de saveurs
-                </p>
+            <div class="concept text-center one-page">
+                <div class="auto-center">
+                    <h2>Le concept</h2>
+                    <h3 class="catch-phrase">
+                        Faites de vos ongles de vraies petites oeuvres d'art grâce au Nail Art !
+                    </h3>
+                    <p class="content">
+                        Corbeille.Work, destiné aux entreprises et à leurs collaborateurs, propose des formules de fruits gourmands et vitaminés avec la garantie d’une fraîcheur incomparable, s’adaptant à la vie professionnelle de chacun. Nos maîtres fruitiers sélectionnent avec soin les meilleurs fruits de saison pour un effet rempli de saveurs
+                    </p>
+                </div>
             </div>
 
-            <div class="offer text-center">
-                <h2>Les formules</h2>
+            <div class="offer text-center align-content-center one-page">
+                <div class="auto-center">
+                    <h2>Les formules</h2>
+                </div>
             </div>
 
-            <div class="skills text-center">
-                <h2>Les techniques</h2>
-                <div class="skills-list">
-                    <div class="skills-specific">
-                        <p class="title">nail art graphique</p>
-                        <p class="content">Rapide à réaliser, cette manucure en noir et blanc est ultra chic</p>
-                    </div>
-                    <div class="skills-specific">
-                        <p class="title">le nail art à poix</p>
-                        <p class="content">Cédez à la grande tendance du nail art avec cette jolie manucure à pois</p>
-                    </div>
-                    <div class="skills-specific">
-                        <p class="title">le stamping</p>
-                        <p class="content"></p>
-                    </div>
-                    <div class="skills-specific">
-                        <p class="title">le nail art "romantique"</p>
-                        <p class="content">Cette technique permet avec n’importe quel vernis de créer une multitude d’effets : points, lignes, formes géométriques ...</p>
+            <div class="skills text-center one-page">
+                <div class="auto-center">
+                    <h2>Les techniques</h2>
+                    <p class="catch-phrase">Quelques-unes des techniques utilisées</p>
+                    <div class="row skills-list">
+                        <div class="col-md-3 skills-specific">
+                            <img class="img-fluid img-rounded" src="{{ asset('/images/avatar.png') }}" alt="">
+                            <p class="title">Nail art graphique</p>
+                            <p class="content">Rapide à réaliser, cette manucure en noir et blanc est ultra chic</p>
+                        </div>
+                        <div class="col-md-3 skills-specific">
+                            <img class="img-fluid img-rounded" src="{{ asset('/images/avatar.png') }}" alt="">
+                            <p class="title">Nail art à poix</p>
+                            <p class="content">Cédez à la grande tendance du nail art avec cette jolie manucure à pois</p>
+                        </div>
+                        <div class="col-md-3 skills-specific">
+                            <img class="img-fluid img-rounded" src="{{ asset('/images/avatar.png') }}" alt="">
+                            <p class="title">Stamping</p>
+                            <p class="content"></p>
+                        </div>
+                        <div class="col-md-3 skills-specific">
+                            <img class="img-fluid img-rounded" src="{{ asset('/images/avatar.png') }}" alt="">
+                            <p class="title">Nail art "romantique"</p>
+                            <p class="content">Cette technique permet avec n’importe quel vernis de créer une multitude d’effets : points, lignes, formes géométriques ...</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="materials text-center one-page">
+                <div class="auto-center">
+                    <h2>Le matériel</h2>
+                </div>
+            </div>
+
+            <div class="reservation text-center one-page">
+                <div class="auto-center">
+                    <h2>À votre service</h2>
+                    <h3 class="catch-phrase">
+                        Ici, ca s'passe comme ca !
+                    </h3>
+                    <div class="content">
+                        {{ include('/home/reservation.html.twig')  }}
+                    </div>
+                </div>
+            </div>
+
 
 
         </div>

@@ -7,13 +7,22 @@ $primary: darken(#428bca, 20%);
 
 @font-face {
   font-family: 'cardo';
-  src: url("../fonts/Cardo/Cardo-Italic.ttf") format('truetype'), url("../fonts/Cardo/Cardo-Regular.ttf") format('truetype');
+  src: url("../fonts/Cardo/Cardo-Italic.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'cardo-regular';
+  src: url("../fonts/Cardo/Cardo-Regular.ttf") format('truetype');
 }
 
 @font-face {
   font-family: 'open-sans';
   src: url("../fonts/Open_Sans/OpenSans-Regular.ttf") format('truetype'), url("../fonts/Open_Sans/OpenSans-Regular.ttf") format('truetype');
 }
+
+// colors //
+$colorWhite : #FFFFFF;
+$colorLightGrey : #F7F7F7;
 
 .avatar {
   max-height: 128px;
@@ -33,3 +42,4 @@ $primary: darken(#428bca, 20%);
 
 @import "home";
 @import "navbar";
+@import "reservation";
